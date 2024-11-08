@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="project.css">
+    
+    <script>
+    function toggleTable() {
+        const section = document.getElementById("availabilitySection");
+        const welcomeSection = document.getElementById("welcome");
+     //Hide the your issues section
+    // Hide the welcome section
+    welcomeSection.style.display = "none";
+    
+    // Toggle the availability section
+   
+        section.style.display =(section.style.display === "none" || section.style.display === "") ? "block" :  "none";
+        // don't display welcome section and Your-issues section afer clicking on check availability
+    }
+    </script>
+
+    <script>
+        function showSection(section) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(sec => {
+                sec.style.display = 'none';
+            });
+            document.getElementById(section).style.display='block';
+        }
+
+        window.onload = () => {
+            showSection('welcome'); // Show the welcome section on load
+        };
+    
+
+    </script>
+
+</head>
+
+<body>
+    
+    <br>
+    <div class="welcome-container">
+        <h1>Welcome to a place where you are heard!!!</h1>
+    </div>
+    <br>
+    
+    <br>
+    <div class="nav">
+        <a href="javascript:void(0);" onclick="showSection('personal-info')">Personal Info</a>
+
+        <a href="javascript:void(0);" onclick="showSection('department')">Department</a>
+
+        <a href="javascript:void(0);" onclick="showSection('Your-issues')">Your-Issues </a>
+
+        <a href="javascript:void(0);" onclick="toggleTable()">Check Availability</a>
+        
+    </div>
+<br>
+
+    <div id="welcome" class="section">
+
+        <p>"Welcome to our solution platform, where collaboration sparks innovation and together we transform challenges into opportunities!"
+            We provide innovative solutions to meet your needs.<br></p>
+
+    </div>
+
+    
+        
+        <div id="availabilitySection" class="section" style="display: none;" >
+            <table id="availabilityTable"  border="50" cellpadding="4" >
+                
+               <thead>
+                   <tr>
+                <th>Department</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+        </thead>
+        <tbody>  
+            <tr>
+                <td>Power</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>OFF</td>
+                <td>OFF</td>
+                <td>OFF</td>
+            </tr>
+            <tr>
+                <td>Water</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>OFF</td>
+                <td>OFF</td>
+
+            </tr>
+            <tr>
+                <td>Education</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>OFF</td>
+                <td>OFF</td>
+                
+            </tr>
+            <tr>
+            <td>Muncipality</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>OFF</td>
+                <td>OFF</td>
+            </tr>
+            <tr>
+            <td>Security<br></td>
+            <td>9am-5pm</td>
+            <td>9am-5pm</td>
+            <td>9am-5pm</td>
+            <td>9am-5pm</td>
+            <td>9am-5pm</td>
+            <td>9am-5pm</td>
+            <td>OFF</td>
+            
+
+        </tr>
+        <tr>
+                <td>Transportation <br> and Roads</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>9am-5pm</td>
+                <td>OFF</td>
+                <td>OFF</td>
+                <td>OFF</td>
+            </tr>
+
+            <tr>
+                <td>Health and<br> Sanitation</td>
+                    <td>9am-5pm</td>
+                    <td>9am-5pm</td>
+                    <td>9am-5pm</td>
+                    <td>9am-5pm</td>
+                    <td>9am-5pm</td>
+                    <td>OFF</td>
+                    <td>OFF</td>
+                </tr>
+
+                <tr>
+                    <td>Emergency<br> Services</td>
+                        <td>9am-5pm</td>
+                        <td>9am-5pm</td>
+                        <td>9am-5pm</td>
+                        <td>9am-5pm</td>
+                        <td>9am-5pm</td>
+                        <td>9am-5pm</td>
+                        <td>OFF</td>
+                    </tr>
+    
+        </tbody>
+    </table>
+</div>
+    
+    <div id="personal-info" class="section" style="display:none;">
+
+        <h2>Personal Information</h2>
+<list>
+        <form>
+
+        <label for="First-name"></label>First Name:</label>
+
+            <input type="text" id="first-name" name="first-name" required><br>
+            <br>
+
+            <label for="Last-name">Last Name:</label>
+
+            <input type="text" id="last-name" name="last-name" required><br>
+            <br>
+
+            <label for="Email">Email:</label>
+
+            <input type="email" id="email" name="email" required><br>
+            <br>
+
+            <label for="Mobile number">Mobile number:</label>
+
+            <input type="Mobile number" id="Mobile number" name="Mobile number"><br>
+            <br>
+
+
+            <label for="state">State:</label>
+            
+            <select id="state" name="state">
+                <option value="se">Select</option>
+
+                <option value="ap">Andhra Pradesh</option>
+
+                <option value="arup">Arunachal Pradesh</option>
+
+                <option value="assam">Assam</option>
+
+                <option value="bihar">Bihar</option>
+
+                <option value="chattisghar">Chattisgarh</option>
+
+                <option value="goa">Goa</option>
+
+                <option value="guj">Gujarat</option>
+
+                <option value="har">Haryana</option>
+
+                <option value="him">Himachal Pradesh</option>
+
+                <option value="jar">Jharkhand</option>
+
+                <option value="kar">Karnataka</option>
+
+                <option value="ker">Kerala</option>
+
+                <option value="mp">Madhya Pradesh</option>
+
+                <option value="maha">Maharashtra</option>
+
+                <option value="megh">Meghalaya</option>
+
+                <option value="man">Manipur</option>
+
+                <option value="miz">Mizoram</option>
+
+                <option value="na">Nagaland</option>
+
+                <option value="od">Odissa</option>
+
+                <option value="pu">Punjab</option>
+
+                <option value="raj">Rajasthan</option>
+
+                <option value="sik">Sikkim</option>
+
+                <option value="tn">Tamil Nadu</option>
+
+                <option value="tel">Telangana</option>
+
+                <option value="tri">Tripura</option>
+
+                <option value="up">Uttar Pradesh</option>
+
+                <option value="uk">Uttarakhand</option>
+
+                <option value="wb">West Bengal</option>
+
+                <option value="j&k">Jammu and Kashmir</option>
+
+            </select>
+            <br>
+
+
+<br>
+            <label for="Address">Location:</label>
+
+            <input type="Adress" id="adress" name="Adress" required><br>
+            <br>
+
+            <button type="submit">Submit</button>
+
+        </form>
+</list>
+    </div>
+
+    <div id="department" class="section" style="display:none;">
+
+        <h2>Departments</h2>
+        
+   <label for="power">Power</label>
+   <input type="checkbox" name="power"><br><br>
+
+   <label for="water">Water Scarcity</label>
+   <input type="checkbox" name="water"><br><br>
+
+   <label for="edu">Education</label>
+   <input type="checkbox" name="edu"><br><br>
+
+   <label for="muncipality">Muncipality</label>
+   <input type="checkbox" name="muncipality"><br><br>
+
+   <label for="police">Security</label>
+   <input type="checkbox" name="police"><br><br>
+
+   <label for="Transportation ">Transportation and Roads</label>
+   <input type="checkbox" name="Transportation"><br>
+<br>
+   <label for="Health">Health and Sanitation</label>
+   <input type="checkbox" name="Health"><br>
+   <br>
+   <label for="emergency">Emergency Services</label>
+   <input type="checkbox" name="emergency"><br>
+      <a name="raised"></a>
+
+    <div id="button" >
+<br>
+   <button type="submit">Submit</button></div>
+
+    </div>
+
+    <div id="Your-issues" class="section" style="display:none;">
+
+        <h2>Your Issues</h2>
+
+
+        <form>
+
+            <label for="issue">Describe your issue:</label>
+
+            <textarea id="issue" name="issue" rows="13" required></textarea>
+
+            <br>
+            <br>
+            <br>
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </div>
+    
+
+    <div id="list">
+    
+    <ul class="vertical-list" style="list-style-type: circle;">
+
+        <h2>Instructions:</h2>
+
+      <li>To submit your issues first click on the Personal Info in the above menu.</li> 
+
+      <li>Enter the required information and click on submit.</li> 
+
+      <li>Then click on Departments in the menu. </li> 
+
+      <li>After that select the department in which you are facing the problem and click on submit.</li> 
+
+      <li>After that click on your Your-Issues in the above menu.</li> 
+
+      <li>Then write about the issue that you are facing and what help you need from us.</li>
+
+      <li>Click on check availability button  and check the timings in the department that you are facing the problem.</li>
+
+      <li> Please ensure that you submit your issues in the respective timings provided in check availability table.</li>
+
+      </ul> 
+    
+    </div>
+
+</body>
+
+</html>
